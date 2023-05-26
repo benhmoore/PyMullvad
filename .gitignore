@@ -1,0 +1,6 @@
+**/**.log
+**/**.egg-info
+dist/**
+**/**.sqlite
+**/**.db
+**/__pycache__

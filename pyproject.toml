@@ -1,0 +1,19 @@
+[tool.setuptools]
+packages = ["pymullvad"]
+
+[tool.pdm]
+package-dir = "pymullvad" # The directory of the package modules
+
+[project]
+name = "pymullvad"
+version = "0.1.0"
+description = "A specialized crawler for video sharing websites."
+readme = "readme.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3.9"
+]
+dependencies = ["colorama"]
+
+[build-system]
+requires = ["setuptools", "wheel"]
