@@ -8,8 +8,12 @@ class Mullvad:
     """Python interface for Mullvad CLI tool."""
 
     @staticmethod
-    def get_account_number():
-        """Get Mullvad account number."""
+    def get_account_number() -> int:
+        """Gets the Mullvad account number.
+
+        Returns:
+            int: The account number. -1 if not available.
+        """
 
         try:
             output = subprocess.check_output(
@@ -19,7 +23,7 @@ class Mullvad:
             )
         except subprocess.CalledProcessError as e:
             print("Mullvad VPN CLI tool not available.")
-            return False
+            return -1
 
         result = output.strip()
         result = result.split("\n")[0]
